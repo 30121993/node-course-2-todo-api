@@ -27,6 +27,7 @@ app.listen(3000, ()=>{
 });
 
 
+module.exports.app = app;
 
 // save new something
 // var newTodo = new Todo({
