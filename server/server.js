@@ -74,50 +74,67 @@ app.get('/todos/:id', (req, res) => {
 
 })
 
-app.delete('/todos/:id', (req, res)=>{
-  // get the id
+app.delete('/todos/:id', (req, res) => {
+    // get the id
     var id = req.params.id;
-  // validate the id -> not valid? return 404
-    if(!ObjectID.isValid(id)){
-      return res.status(404).send();
+    // validate the id -> not valid? return 404
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send();
     }
 
-    Todo.findByIdAndRemove(id).then((todo)=>{
-      if(!todo){
-        return res.status(404).send();
-      }
+    Todo.findByIdAndRemove(id).then((todo) => {
+        if (!todo) {
+            return res.status(404).send();
+        }
 
-      res.send({todo});
-    }).catch((e) =>{
-      res.status(404).send();
+        res.send({todo});
+    }).catch((e) => {
+        res.status(404).send();
     });
 });
 
-app.patch('/todos/:id', (req,res) =>{
-  var id = req.params.id;
-  var body = _.pick(req.body, ['text', 'completed']);
+app.patch('/todos/:id', (req, res) => {
+    var id = req.params.id;
+    var body = _.pick(req.body, ['text', 'completed']);
 
-  if(!ObjectID.isValid(id)){
-    return res.status(404).send();
-  }
-
-  if (_.isBoolean(body.completed) && body.completed) {
-    body.completedAt = new Date().getTime();
-  }else{
-    body.completed = false;
-    body.completedAt = null;
-  }
-
-  Todo.findByIdAndUpdate(id, {$set: body}, {new: true}).then((todo) =>{
-    if(!todo){
-      return res.status(404).send();
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send();
     }
 
-    res.send({todo});
-  }).catch((e) =>{
-    res.status(400).send();
-  })
+    if (_.isBoolean(body.completed) && body.completed) {
+        body.completedAt = new Date().getTime();
+    } else {
+        body.completed = false;
+        body.completedAt = null;
+    }
+
+    Todo.findByIdAndUpdate(id, {$set: body}, {new: true}).then((todo) => {
+        if (!todo) {
+            return res.status(404).send();
+        }
+
+        res.send({todo});
+    }).catch((e) => {
+        res.status(400).send();
+    })
 });
+
+// POST /users
+app.post('/users', (req, res) => {
+    var body = _.pick(req.body, ['email', 'password']);
+    var user = new User(body);
+
+
+    user.save().then((user) => {
+        return user.generateAuthToken();
+        // res.send(user);
+    }).then((token) => {
+        res.header('x-auth', token).send(user);
+    }).catch((e) => {
+        res.status(400).send(e);
+    });
+});
+
 
 app.listen(port, () => {
     console.log(`Starting on port ${port}`);
@@ -151,7 +168,6 @@ module.exports.app = app;
 
 // User
 // email - require it - trim it - set type - set minlenght of 1
-
 
 
 // var user = new User({
