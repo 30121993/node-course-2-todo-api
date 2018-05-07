@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e5c0fbe-6309-4b23-a20a-dd772eb46acd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/node-course-2-todo-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/node-course-2-todo-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/test/seed/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/test/seed/seed.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +16,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="412">
+              <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -208,7 +201,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="IntelliLang.Advanced" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -326,7 +319,7 @@
       <workItem from="1525513531130" duration="3971000" />
       <workItem from="1525656457250" duration="4924000" />
       <workItem from="1525662586280" duration="1768000" />
-      <workItem from="1525664399817" duration="874000" />
+      <workItem from="1525664399817" duration="1354000" />
     </task>
     <servers />
   </component>
@@ -339,7 +332,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46432000" />
+    <option name="totallyTimeSpent" value="46912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="793" y="0" width="814" height="877" extended-state="0" />
@@ -356,7 +349,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286908" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32855093" />
       <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.32891247" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.17548746" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2482066" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Phaser Chains" order="7" weight="0.32962447" />
       <window_info id="Designer" order="2" />
@@ -728,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="412">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
         </state>
       </provider>
     </entry>
